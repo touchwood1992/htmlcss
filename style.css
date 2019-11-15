@@ -194,7 +194,7 @@ header {
   right: 0;
   width: 100%;
   z-index: 1;
-  background-color: #ebe8e8;
+  background-color: #cecdcd;
   padding: 3px 0;
   animation: slow-slidedown 0.3s ease-in-out;
 }
@@ -214,8 +214,7 @@ header {
   width: 50px;
 }
 .js--nav-sticky ul li a {
-  color: #696969;
-  font-weight: 300;
+  color: #5e5c5c;
 }
 .js--nav-sticky ul li a:hover {
   border-color: #a5a4a4;

@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.container {
+  margin: 0 auto;
+  width: 1170px;
+  padding: 0 15px;
+}
+.container::before,
+.row::before {
+  content: "";
+  display: table;
+}
+.container::after,
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  margin: 0 -15px;
+  font-size: 200%;
+}
+.col-md-3 {
+  padding: 0 15px;
+  float: left;
+  width: 25%;
+}

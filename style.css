@@ -420,12 +420,16 @@ header {
 .testimonial-section {
   color: #fff;
 }
+.testimonial-section .section-title {
+  padding-bottom: 50px;
+}
 .testimonial-item blockquote {
   margin-bottom: 50px;
   font-style: italic;
   font-weight: 300;
   text-align: justify;
   position: relative;
+  font-size: 120%;
 }
 
 .testimonial-item blockquote::before {
@@ -445,6 +449,7 @@ header {
 .testimonial-item cite {
   display: block;
   margin-top: 20px;
+  font-size: 90%;
 }
 
 /*==========================================*/

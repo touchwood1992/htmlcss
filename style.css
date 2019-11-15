@@ -194,7 +194,7 @@ header {
   right: 0;
   width: 100%;
   z-index: 1;
-  background-color: #cecdcd;
+  background-color: #e7e7e7;
   padding: 3px 0;
   animation: slow-slidedown 0.3s ease-in-out;
 }

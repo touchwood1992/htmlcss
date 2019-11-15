@@ -563,6 +563,11 @@ footer .footer-left ul a:active {
 .ion-logo-instagram:hover {
   color: #517fa4;
 }
+
+input[type="checkbox"]:focus {
+  box-shadow: none !important;
+}
+
 /*===========================================*/
 /*MOBILE CSS*/
 /*===========================================*/

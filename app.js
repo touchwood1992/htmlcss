@@ -1,9 +1,23 @@
 const topOffsetOfFIrstSection = document.querySelector(".features-section");
 const navMenu = document.querySelector(".navbar.top-nav");
+let TotaltopScroll = 0;
+
+function onScrollAnimation(element, className, scrollValue, percentage) {
+  const TotaltopScroll = scrollValue + window.innerHeight;
+
+  if (TotaltopScroll > element.offsetTop + element.offsetTop * percentage) {
+    element.classList.add(className);
+    element.classList.add("animated");
+  } else {
+    // element.classList.remove(className);
+    // element.classList.remove("animated");
+  }
+}
 
 window.onscroll = function() {
   const scrollValue = window.pageYOffset;
 
+  //Making sticky Header
   if (
     scrollValue >
     topOffsetOfFIrstSection.offsetTop - topOffsetOfFIrstSection.offsetTop * 0.2
@@ -12,6 +26,52 @@ window.onscroll = function() {
   } else {
     navMenu.classList.remove("js--nav-sticky");
   }
+
+  //Fade In features-section
+
+  onScrollAnimation(
+    document.querySelector(".features-section"),
+    "fadeIn",
+    scrollValue,
+    0.15
+  );
+  onScrollAnimation(
+    document.querySelector(".favourite-meal-section"),
+    "fadeIn",
+    scrollValue,
+    0.15
+  );
+  onScrollAnimation(
+    document.querySelector(".app-image-container"),
+    "bounceIn",
+    scrollValue,
+    0.0
+  );
+
+  onScrollAnimation(
+    document.querySelector(".cities-section"),
+    "fadeIn",
+    scrollValue,
+    0.15
+  );
+  onScrollAnimation(
+    document.querySelector(".testimonial-section"),
+    "fadeIn",
+    scrollValue,
+    0.15
+  );
+  onScrollAnimation(
+    document.querySelector(".pricing-plans-section"),
+    "fadeIn",
+    scrollValue,
+    0.15
+  );
+  onScrollAnimation(
+    document.querySelector(".contact-section"),
+    "fadeIn",
+    scrollValue,
+    0.1
+  );
 };
 
 $(document).on("click", 'a[href^="#"]', function(e) {

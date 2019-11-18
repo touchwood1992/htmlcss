@@ -5,8 +5,11 @@ let TotaltopScroll = 0;
 function onScrollAnimation(element, className, scrollValue, percentage) {
   const scrolltop = scrollValue;
   const elementOffset = element.offsetTop;
-  console.log(element);
-  if (scrolltop >= elementOffset - element.clientHeight * 0.8) {
+
+  if (
+    scrolltop + window.innerHeight >=
+    elementOffset + element.clientHeight * 0.5
+  ) {
     element.classList.add(className);
     element.classList.add("animated");
   } else {

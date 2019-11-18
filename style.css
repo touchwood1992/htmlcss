@@ -671,6 +671,9 @@ input[type="checkbox"]:focus {
   .hero-btn {
     padding: 10px 15px;
   }
+  .btn-without-bg {
+    margin-top: 10px;
+  }
   .btn-with-bg,
   .btn-with-bg:visited {
     margin-right: 1px;

@@ -3,14 +3,15 @@ const navMenu = document.querySelector(".navbar.top-nav");
 let TotaltopScroll = 0;
 
 function onScrollAnimation(element, className, scrollValue, percentage) {
-  const TotaltopScroll = scrollValue + window.innerHeight;
-
-  if (TotaltopScroll > element.offsetTop + element.offsetTop * percentage) {
+  const scrolltop = scrollValue;
+  const elementOffset = element.offsetTop;
+  console.log(element);
+  if (scrolltop >= elementOffset - element.clientHeight * 0.8) {
     element.classList.add(className);
     element.classList.add("animated");
   } else {
-    // element.classList.remove(className);
-    // element.classList.remove("animated");
+    element.classList.remove(className);
+    element.classList.remove("animated");
   }
 }
 

@@ -6,10 +6,7 @@ function onScrollAnimation(element, className, scrollValue, percentage) {
   const scrolltop = scrollValue;
   const elementOffset = element.offsetTop;
 
-  if (
-    scrolltop + window.innerHeight >=
-    elementOffset + element.clientHeight * 0.5
-  ) {
+  if (scrolltop + window.innerHeight >= elementOffset + 200) {
     element.classList.add(className);
     element.classList.add("animated");
   } else {
@@ -18,7 +15,10 @@ function onScrollAnimation(element, className, scrollValue, percentage) {
   }
 }
 
-window.onscroll = function() {
+window.onscroll = loadAnimation;
+document.addEventListener("DOMContentLoaded", loadAnimation, false);
+
+function loadAnimation() {
   const scrollValue = window.pageYOffset;
 
   //Making sticky Header
@@ -76,7 +76,7 @@ window.onscroll = function() {
     scrollValue,
     0.1
   );
-};
+}
 
 $(document).on("click", 'a[href^="#"]', function(e) {
   // target element id

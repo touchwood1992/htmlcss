@@ -97,3 +97,17 @@ $(document).on("click", 'a[href^="#"]', function(e) {
   // animated top scrolling
   $("body, html").animate({ scrollTop: pos - 50 });
 });
+
+(function($) {
+  $(document).on("click", ".mobile-menu-icon", function(e) {
+    $(".top-nav ul").toggleClass("opennav");
+    $("body").toggleClass("mobilemenu");
+    if ($(this).hasClass("ion-ios-menu")) {
+      $(this).removeClass("ion-ios-menu");
+      $(this).addClass("ion-ios-close");
+    } else {
+      $(this).removeClass("ion-ios-close");
+      $(this).addClass("ion-ios-menu");
+    }
+  });
+})(jQuery);

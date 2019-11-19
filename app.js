@@ -100,7 +100,6 @@ $(document).on("click", 'a[href^="#"]', function(e) {
 
 (function($) {
   $(document).on("click", ".mobile-menu-icon", function(e) {
-    $(".top-nav ul").toggleClass("opennav");
     $("body").toggleClass("mobilemenu");
     if ($(this).hasClass("ion-ios-menu")) {
       $(this).removeClass("ion-ios-menu");

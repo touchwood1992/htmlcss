@@ -703,7 +703,7 @@ input[type="checkbox"]:focus {
   .js--nav-sticky ul li a {
     color: #fff;
   }
-  ul.site-menu.opennav {
+  .mobilemenu ul.site-menu {
     opacity: 1;
     z-index: 3;
     visibility: visible;
@@ -712,7 +712,7 @@ input[type="checkbox"]:focus {
   .js--nav-sticky .mobile-menu-icon {
     color: #000;
   }
-  .mobilemenu::after {
+  body.mobilemenu::after {
     content: "";
     width: 100vw;
     height: 100vh;
